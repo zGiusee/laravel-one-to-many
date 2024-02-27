@@ -60,17 +60,16 @@
                         <p class="project-properties">{{ $project->img }}</p>
                         @if ($project->img !== null)
                             @if (Str::contains($project->img, 'https'))
-                                <img src="{{ $project->img }}" alt="{{ $project->name }}" width="300">
+                                <img class=" my-5" src="{{ $project->img }}" alt="{{ $project->name }}" width="300">
                             @else
-                                <img src="{{ asset('/storage/' . $project->img) }}" alt="{{ $project->name }}"
-                                    width="300">
+                                <img class=" my-5" src="{{ asset('/storage/' . $project->img) }}"
+                                    alt="{{ $project->name }}" width="300">
                             @endif
                         @else
                             <div>
                                 No images
                             </div>
                         @endif
-
                     </div>
 
                     <div>

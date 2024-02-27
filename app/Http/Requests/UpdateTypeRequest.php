@@ -24,13 +24,14 @@ class UpdateTypeRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'unique|max:255',
+            'name' => 'required|max:255',
         ];
     }
 
     public function messages()
     {
         return [
+            'name.required' => 'The type name is required!',
             'name.max' => 'The project name must not be longer than 255 characters!',
             'name.unique' => 'The project name must be unique!',
         ];

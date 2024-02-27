@@ -56,7 +56,8 @@
                                     <label for="img">Project image link and img:</label>
                                     <input accept="image/*" type="file" name="img" id="img"
                                         placeholder="Image link" value="{{ $project->img }}">
-                                    <img src="{{ asset('/storage/' . $project->img) }}" alt="" width="300">
+                                    <img class=" my-5" src="{{ asset('/storage/' . $project->img) }}" alt=""
+                                        width="300">
                                     @error('img')
                                         <div class="my-error-msg">WARNING: {{ $message }}</div>
                                     @enderror

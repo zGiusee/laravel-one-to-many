@@ -113,6 +113,13 @@
                                         Pojects
                                     </a>
                                 </div>
+                                <div
+                                    class="{{ Route::currentRouteName() == 'admin.types.index' ? 'bg-white' : '' }} p-4">
+                                    <a class="{{ Route::currentRouteName() == 'admin.types.index' ? '' : 'text-white' }}"
+                                        href="{{ route('admin.types.index') }}">
+                                        Project Types
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
