@@ -16,14 +16,30 @@
                     </div>
 
                     <div>
+                        {{-- NAME --}}
                         <p class="project-p"> Project name:
                         </p>
                         <p class="project-properties">{{ $project->name }}</p>
+
+                        {{-- ID --}}
                         <p class="project-p"> Project id:
                         </p>
                         <p class="project-properties">
                             {{ $project->id }}
                         </p>
+
+                        {{-- TYPE --}}
+                        <p class="project-p"> Project type:
+                        </p>
+                        @if ($project->type_id == null)
+                            <p class="project-properties">
+                                Nessun tipo associato.
+                            </p>
+                        @else
+                            <p class="project-properties">
+                                {{ $project->type->name }}
+                            </p>
+                        @endif
                     </div>
 
                     <div>

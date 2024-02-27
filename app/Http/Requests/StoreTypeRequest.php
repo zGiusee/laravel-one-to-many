@@ -13,7 +13,7 @@ class StoreTypeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class StoreTypeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'unique|max:255',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.max' => 'The project name must not be longer than 255 characters!',
+            'name.unique' => 'The project name must be unique!',
         ];
     }
 }

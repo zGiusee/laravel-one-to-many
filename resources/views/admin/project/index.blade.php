@@ -14,10 +14,9 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Repository Link</th>
                                 <th scope="col">Starting Date</th>
                                 <th scope="col">Ending Date</th>
-                                <th scope="col">Image Link</th>
+                                <th scope="col">Type</th>
                                 {{-- <th scope="col">Slug</th> --}}
                                 <th scope="col">Tools</th>
                             </tr>
@@ -28,11 +27,11 @@
                                     {{-- TABLE PROPERTIES --}}
                                     <th scope="row">{{ $project->id }}</th>
                                     <td>{{ $project->name }}</td>
-                                    <td>{{ Str::limit($project->description, 50, '...') }}</td>
                                     <td>{{ Str::limit($project->repository_link, 30, '...') }}</td>
                                     <td>{{ $project->date_start }}</td>
                                     <td>{{ $project->date_end }}</td>
-                                    <td>{{ Str::limit($project->img, 20, '...') }}</td>
+                                    <td>{{ $project->type != null ? $project->type->name : 'Nessun tipo associato' }}
+                                    </td>
 
                                     {{-- TOOLS --}}
                                     <td>

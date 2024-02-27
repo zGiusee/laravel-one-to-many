@@ -25,6 +25,7 @@ class UpdateProjectRequest extends FormRequest
     {
         return [
             'name' => 'required|max:150',
+            'type_id' => 'nullable|exists:types,id',
             'description' => 'required',
             'repository_link' => 'required|max:255',
             'date_start' => 'required',

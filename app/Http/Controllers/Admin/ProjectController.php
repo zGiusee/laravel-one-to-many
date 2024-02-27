@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\Type;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use Illuminate\Support\Str;
@@ -29,7 +30,10 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.project.create');
+        // RECUPERO I TIPI DA ASSOCIARE AI PROGETTI
+        $types = Type::all();
+
+        return view('admin.project.create', compact('types'));
     }
 
     /**
@@ -40,6 +44,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
+
         // RECUPERO I DATI DELLA RICHIESTA
         $form_data = $request->all();
 
@@ -91,7 +96,10 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.project.edit', compact('project'));
+        // RECUPERO I TIPI DA ASSOCIARE AI PROGETTI
+        $types = Type::all();
+
+        return view('admin.project.edit', compact('project', 'types'));
     }
 
     /**
@@ -103,6 +111,7 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
+
         // RECUPERO I DATI DELLA RICHIESTA
         $form_data = $request->all();
 
