@@ -14,7 +14,7 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Slug</th>
-                                <th>Included in N'Projects</th>
+                                <th>Included in N'types</th>
                                 <th scope="col">Tools</th>
                             </tr>
                         </thead>
@@ -37,12 +37,12 @@
                                         </a>
 
 
-                                        {{-- <button class="my_delete_button" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal" type="button"
-                                            data-project-slug="{{ $project->slug }}"
-                                            data-project-name="{{ $project->name }}">
+                                        <button class="my_delete_button" data-bs-toggle="modal"
+                                            data-bs-target="#delete_type_modal" type="button"
+                                            data-slug="{{ $type->slug }}" data-name="{{ $type->name }}"
+                                            data-type="types">
                                             <i class="fa-solid fa-trash"></i>
-                                        </button> --}}
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -51,6 +51,6 @@
                 </div>
             </div>
         </div>
-        {{-- @include('admin.partials.delete_modal') --}}
+        @include('admin..type.partials.delete_type_modal')
     </div>
 @endsection

@@ -56,9 +56,8 @@
                                             </button>
                                         </form> --}}
                                         <button class="my_delete_button" data-bs-toggle="modal"
-                                            data-bs-target="#delete_modal" type="button"
-                                            data-project-slug="{{ $project->slug }}"
-                                            data-project-name="{{ $project->name }}">
+                                            data-bs-target="#delete_modal" type="button" data-slug="{{ $project->slug }}"
+                                            data-name="{{ $project->name }}" data-type="projects">
                                             <i class="fa-solid fa-trash"></i>
                                         </button>
 
