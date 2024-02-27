@@ -36,7 +36,6 @@
                                             <i class="fa-solid fa-pencil"></i>
                                         </a>
 
-
                                         <button class="my_delete_button" data-bs-toggle="modal"
                                             data-bs-target="#delete_type_modal" type="button"
                                             data-slug="{{ $type->slug }}" data-name="{{ $type->name }}"

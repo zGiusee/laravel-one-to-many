@@ -31,7 +31,7 @@
 
                                         <option value="" selected> Seleziona un tipo</option>
                                         @foreach ($types as $type)
-                                            <option value="{{ $type->id }}" @selected($type->id == {{ old('type_id') }})>
+                                            <option value="{{ $type->id }}" @selected($type->id == old('type_id'))>
                                                 {{ $type->name }}</option>
                                         @endforeach
 
