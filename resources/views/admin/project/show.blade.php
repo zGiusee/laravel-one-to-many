@@ -42,22 +42,29 @@
                         @endif
                     </div>
 
+                    {{-- DESCRIPTION --}}
                     <div>
                         <p class="project-p"> Project description:
                         </p>
                         <p class="project-properties">{{ $project->description }}</p>
                     </div>
 
+                    {{-- REPOSITORY LINK --}}
                     <div>
                         <p class="project-p"> Project repository link:
                         </p>
                         <p class="project-properties">{{ $project->repository_link }}</p>
                     </div>
 
+                    {{-- IMAGE --}}
                     <div>
                         <p class="project-p"> Project img link and img:
                         </p>
+
+                        {{-- IMAGE LINK --}}
                         <p class="project-properties">{{ $project->img }}</p>
+
+                        {{-- CONTROLLI IMAGE --}}
                         @if ($project->img !== null)
                             @if (Str::contains($project->img, 'https'))
                                 <img class=" my-5" src="{{ $project->img }}" alt="{{ $project->name }}" width="300">
@@ -72,12 +79,14 @@
                         @endif
                     </div>
 
+                    {{-- SLUG --}}
                     <div>
                         <p class="project-p"> Project slug:
                         </p>
                         <p class="project-properties">{{ $project->slug }}</p>
                     </div>
 
+                    {{-- STARTING AND ENDING DATES --}}
                     <div>
                         <p class="d-inline-block project-p"> Project starting date:
                         </p>
